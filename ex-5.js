@@ -82,3 +82,37 @@ let orders = [
 ];
 
 // Start coding here
+//1
+let total = 0;
+let avr = 0;
+for (let i = 0; i < scoreStudent.length ; i++) {
+    total = (total + scoreStudent[i].score);
+avr = total / scoreStudent.length;
+}
+console.log(avr)
+
+//2
+let highestStudent = scoreStudent[0];
+let hightScore = scoreStudent[0].score;
+
+for (let i = 1; i<scoreStudent.length; i++){
+    if (scoreStudent[i].score > hightScore) {
+hightScore = scoreStudent[i].score;
+highestStudent = scoreStudent[i];
+    }
+}
+console.log(highestStudent.nameS + " has the highest score, which id " + highestStudent.score + " points");
+
+
+//3
+let lowestStudent = scoreStudent[0];
+let lowScore = scoreStudent[0].score;
+
+for (i = 1 ; i < scoreStudent.length ; i++){
+if (scoreStudent[i].score < lowScore){
+    lowScore = scoreStudent[i].score;
+    lowestStudent = scoreStudent[i];
+}
+};
+console.log(lowestStudent.nameS + " has lowest score, which is " + lowestStudent.score + " points"
+);
